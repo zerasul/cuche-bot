@@ -1,8 +1,8 @@
 # cueh-bot
 
-**Disscord Example Bot**
+**Discord Example Bot**
 
-Bot de ejemplo para Disscord; este bot responde a la cadena !cueh con un 'cueh para ti @usuario'. Es un bot de ejemplo.
+Bot de ejemplo para Discord; este bot responde a la cadena !cueh con un 'cueh para ti @usuario'. Es un bot de ejemplo.
 
 Requiere la librería discord.py. Que puede instalarse mediante pip.
 
