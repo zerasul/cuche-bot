@@ -10,7 +10,7 @@ Requiere la librería discord.py. Que puede instalarse mediante pip.
 $ pip install -U discord.py
 ```
 
-Se ha añadido un requirements.txt.txt para usar con pip.
+Se ha añadido un requirements.txt para usar con pip.
 
 ```
 $ pip install -r requirements.txt
