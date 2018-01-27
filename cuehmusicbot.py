@@ -25,6 +25,8 @@ class Cueh:
 
     @commands.command(pass_context=True, no_pm=True)
     async def cuehplay(self, ctx, urlsong):
+        if self.voice is None:
+            await self.show_message("Primero conectate a un canal de Voz, Cueh", mtts=True)
         if self.player != None:
             if not self.player.is_done():
                 await self.show_message("Parando {}".format(self.player.title), mtts=True)
