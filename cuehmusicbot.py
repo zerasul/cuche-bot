@@ -1,9 +1,9 @@
 import discord
 import settings
+import datetime as DT
 from discord.ext import commands
 
 discord.opus.load_opus('libopus.0.dylib')
-
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('!'), description='Reproduce musica desde youtube')
 
 class Cueh:
@@ -37,7 +37,13 @@ class Cueh:
         await self.show_message(msg, mtts=True)
         self.player.start()
         pass
-
+    @commands.command(pass_context=True,no_pm=True)
+    async def cuehclean(self,ctx):
+        today = DT.date.today()
+        date_week= today - DT.timedelta(days = 7)
+        current_channel=ctx.message.channel
+        await bot.purge_from(channel=current_channel,before=date_week,limit=settings.message_limit)
+        pass
     @commands.command(pass_context=True, no_pm=True)
     async def cuehstop(self, ctx):
         if self.player != None:
